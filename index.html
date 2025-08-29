@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keisya Halimah Mulia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { primary: '#6d28d9' } } }
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body class="antialiased bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Navbar with image toggle for theme -->
+    <header class="fixed w-full z-40 bg-white/60 dark:bg-gray-900/60 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/80">
+            <img id="navAvatar" src="nav.png" alt="Keisya" class="w-full h-full object-cover"/>
+          </div>
+          <span class="font-semibold">Keisya Portofolio</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-4 relative">
+          <a href="#portfolio" class="nav-link relative px-3 py-2">Portofolio</a>
+          <a href="#about" class="nav-link relative px-3 py-2">Tentang</a>
+          <a href="#experience" class="nav-link relative px-3 py-2">Pengalaman</a>
+          <a href="#contact" class="nav-link relative px-3 py-2">Kontak</a>
+
+          <!-- decorative bubble behind menu -->
+          <div class="bubble" style="width:140px;height:140px;background:linear-gradient(135deg,#7c3aed,#06b6d4);left:-40px;top:10px;opacity:.08"></div>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <!-- theme images instead of text -->
+          <button id="themeToggle" aria-label="toggle theme" class="p-2 rounded-md ring-1 ring-gray-200 dark:ring-gray-700 bg-white/80 dark:bg-gray-800/80">
+            <img id="iconSun" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4'/></svg>" class="h-5 w-5 block" alt="sun" />
+            <img id="iconMoon" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cbd5e1' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'/></svg>" class="h-5 w-5 hidden" alt="moon" />
+          </button>
+
+          <button id="mobileOpen" class="md:hidden p-2 rounded-md ring-1 ring-gray-200 dark:ring-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+        <div class="flex flex-col gap-2">
+          <a href="#portfolio" class="py-2">Portofolio</a>
+          <a href="#about" class="py-2">Tentang</a>
+          <a href="#experience" class="py-2">Pengalaman</a>
+          <a href="#contact" class="py-2">Kontak</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-24">
+      <section class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <!-- large decorative bubble behind portfolio/about/experience/contact area -->
+        <div class="bubble" style="width:420px;height:420px;background:linear-gradient(120deg,#06b6d4,#7c3aed);right:-80px;top:40px;opacity:.06"></div>
+
+        <!-- Left column: Profile floating card -->
+        <aside class="md:col-span-1">
+          <div class="sticky top-28">
+            <div id="profileCard" class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg float-elem border border-gray-100 dark:border-gray-700">
+              <div class="flex items-center gap-4">
+                <img id="profilePic" src="profil.png" alt="Keisya" class="w-24 h-24 rounded-full object-cover ring-4 ring-white/90 shadow-md profile-zoom" />
+                <div>
+                  <h1 class="text-xl font-bold">Keisya Halimah</h1>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">"Finish what I started"</p>
+                </div>
+              </div>
+
+              <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Halo! Saya undergraduate Information Technologhy student Of Institut Sepuluh Nopember. I love technologhy, editing, drawing, design and some coding</p>
+
+              <div class="mt-4 grid grid-cols-2 gap-2">
+                <a href="#contact" class="inline-flex items-center justify-center rounded-lg px-3 py-2 bg-primary text-white text-sm">Contact</a>
+                <a href="cv.pdf" download class="inline-flex items-center justify-center rounded-lg px-3 py-2 border border-gray-200 dark:border-gray-700 text-sm">Download 
+                  
+                </a>
+              </div>
+
+              <div class="mt-4 text-xs text-gray-500 dark:text-gray-400">
+                <p><strong>Lokasi:</strong>Indonesia</p>
+              </div>
+            </div>
+
+            <!-- Floating badges -->
+            <div class="mt-6 flex gap-3">
+              <div class="p-3 bg-white dark:bg-gray-800 rounded-xl shadow float-elem border border-gray-100 dark:border-gray-700">
+                <div class="text-xs text-gray-500 dark:text-gray-400">Skills</div>
+                <div class="text-sm font-semibold">Bootsrap • Design • CSS • HTML • Editing</div>
+              </div>
+              <div class="p-3 bg-white dark:bg-gray-800 rounded-xl shadow float-elem border border-gray-100 dark:border-gray-700">
+                <div class="text-xs text-gray-500 dark:text-gray-400">Hobby</div>
+                <div class="text-sm font-semibold">Foto • Figure Drawing • Listening Music</div>
+              </div>
+              <div class="p-3 bg-white dark:bg-gray-800 rounded-xl shadow float-elem border border-gray-100 dark:border-gray-700">
+                <div class="text-xs text-gray-500 dark:text-gray-400">MBTI</div>
+                <div class="text-sm font-semibold">INTJ • 53% Introvert • 47% Ekstrovert</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right column: Portfolio and details -->
+        <div class="md:col-span-2 space-y-8">
+          <!-- Intro + filters -->
+          <div class="bg-gradient-to-r from-indigo-50 to-white dark:from-indigo-900/30 dark:to-gray-900/20 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-800 relative overflow-hidden">
+            <h2 class="text-2xl font-bold">Portfolio & Showcase</h2>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">Beberapa hal yang saya hasilkan pada berbagai bidang</p>
+
+            <!-- Filter chips -- using text elements that change color on click -->
+            <div id="chips" class="mt-4 flex flex-wrap gap-3">
+              <button data-filter="all" class="chip px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm">Semua</button>
+              <button data-filter="desain" class="chip px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm">Desain</button>
+              <button data-filter="fotografi" class="chip px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm">Fotografi</button>
+              <button data-filter="video" class="chip px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm">Video</button>
+              <button data-filter="fdraw" class="chip px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm">Figure Drawing</button>
+              <button data-filter="code" class="chip px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 text-sm">Coding</button>
+            </div>
+
+            <!-- small decorative bubble inside intro -->
+            <div class="bubble" style="width:160px;height:160px;background:linear-gradient(135deg,#f97316,#ef4444);left:70px;bottom:-30px;opacity:.06"></div>
+          </div>
+
+          <!-- Gallery -->
+          <section id="portfolio" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card template -->
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="desain"
+              data-images="1.png,2.png">
+              <img src="2.png" alt="design"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Design</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Canva, PixelLab</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Design</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="desain"
+              data-images="4.png,5.png,3.png">
+              <img src="3.png" alt="ilustrasi"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Ilustrasi</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Adobe AI,Canva, IbisPaint X, Infinite Design</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Ilustrasi</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="desain"
+              data-images="7.png,8.png,9.png">
+              <img src="7.png" alt="Poster Jualan"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Poster Jualan</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Canva</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Poster Jualan</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="desain"
+              data-images="6.png,10.png,11.png">
+              <img src="10.png" alt="Poster & Infografis"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Poster & Infografis</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Adobe AI,Canva, IbisPaint X, Infinite Design</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Poster & Infografis</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="fotografi"
+              data-images="f1.jpg,f2.jpg,f3.jpg,f4.jpg,f5.jpg">
+              <img src="f4.jpg" alt="Place Fotografi"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Place Fotografi</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Digicam Canon PowerShot A2300, Lightroom</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Place Fotografi</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="fotografi"
+              data-images="f6.jpg,f7.jpg">
+              <img src="f7.jpg" alt="Contest Fotografi"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Contest Fotografi</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: iPhone 11, Lightroom</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Kartini Project #11</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="fotografi"
+              data-images="f8.jpg,f9.jpg">
+              <img src="f8.jpg" alt="Moment"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Moment</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Canon PowerShot SX430 IS, Lightroom</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Good memories from lens</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700" 
+              data-type="fdraw"
+              data-images="fd1.jpg,fd2.jpg,fd3.jpg,fd4.jpg,fd5.jpg,fd6.jpg,fd7.jpg,fd8.jpg">
+              <img src="fd1.jpg" alt="Figure Drawing"                   
+              class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Figure Drawing</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Manual with graphite pencil</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Figure Drawing</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700"
+              data-type="code"
+              data-link="https://github.com/keisyaahm">
+              <img src="cde1.png"
+                  alt="Personal Website" 
+                  class="w-full h-44 object-cover float-elem cursor-pointer" />
+              <div class="p-4">
+                <h3 class="font-semibold">Personal Website</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: VS Code, Tailwind, HTML, Java, Figma</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">Portofolio Website</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700"
+              data-type="video"
+              data-video="https://drive.google.com/file/d/124hUlGWJ1_ZbrCXZfZwHAX_Exfs_NY9h/preview">
+              <img src="vd1.png" alt="Short Movie Thumbnail" class="w-full h-44 object-cover float-elem cursor-pointer">
+              <div class="p-4">
+                <h3 class="font-semibold">Short Movie</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Samsung A55, Capcut</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">For final project exam 2024</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700"
+              data-type="video"
+              data-video="https://drive.google.com/file/d/1HCGaUEwtItI6FTZKR6IuMPmHNYBKN-wt/preview">
+              <img src="vd2.png" alt="Batik Day Thumbnail" class="w-full h-44 object-cover float-elem cursor-pointer">
+              <div class="p-4">
+                <h3 class="font-semibold">Batik Day</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: iPhone 11, Capcut</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">For Batik Day Event</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="card relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-lg transition border border-gray-100 dark:border-gray-700"
+              data-type="video"
+              data-video="https://drive.google.com/file/d/1aEDMcNQkAIZXfWLRJ5D9HD3PlQyZLzH2/preview">
+              <img src="vd3.png" alt="Journey Thumbnail" class="w-full h-44 object-cover float-elem cursor-pointer">
+              <div class="p-4">
+                <h3 class="font-semibold">Journey</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Tools: Redmi Note 12 Pro, Capcut</p>
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="text-xs text-gray-400">For OKKBK Teknologi Informasi</div>
+                  <button class="viewBtn text-sm px-3 py-1 rounded bg-primary text-white">Lihat</button>
+                </div>
+              </div>
+            </article>
+
+
+          </section>
+
+          <!-- About / Data Diri -->
+          <section id="about" class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow border border-gray-100 dark:border-gray-700">
+            <h3 class="text-xl font-bold mb-3">Data Diri</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <p><strong>Nama:</strong> Keisya Halimah Mulia</p>
+                <p><strong>Lokasi:</strong> Indonesia</p>
+              </div>
+              <div>
+                <p><strong>Email:</strong> itssmekeisya@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <h4 class="font-semibold">Riwayat Pendidikan</h4>
+              <ul class="list-disc ml-5">
+                <li>2025 Institut Teknologi Sepuluh Nopember 
+                  (Information Technologhy)
+                </li>
+                <li>2023-2025 SMAN Karangpandan</li>
+                <li>2022-2023 SMA Muhammadiyah 1 Karanganyar
+                  (ICT Class/Information Communication & Technologhy)
+                </li>
+                <li>2019-2022 SMP N Mojogedang</li>
+              </ul>
+            </div>
+
+            <div class="mt-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                <div>
+                  <h4 class="font-semibold">Kelebihan</h4>
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Mau berkembang</li>
+                    <li>Suka mencoba hal baru</li>
+                    <li>Perfeksionis</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Kekurangan</h4>
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Perfeksionis</li>
+                    <li>Haters fisika</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Experience -->
+          <section id="experience" class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow border border-gray-100 dark:border-gray-700">
+            <h3 class="text-xl font-bold mb-3">Pengalaman</h3>
+            <ol class="list-decimal ml-5 space-y-2">
+            <li>2025 – PDD Karang Taruna Dusun Bakalan</li>
+            <li>2025 – PDD Makrab Kelas XII.5 SMA N Karangpandan</li>
+            <li>2023–2025 – PDD Kelas XII.5 SMA N Karangpandan</li>
+            <li>2024 – Peserta FLS2N Kabupaten Karanganyar, Bidang Desain Poster SMA N Karangpandan</li>
+            <li>2024 – 2nd Winner Fotografi Kartini Project #11 (Fotografer & Editor) SMA N Karangpandan</li>
+            <li>2023 – Peserta OSN Kabupaten Karanganyar, Bidang Informatika SMA Muhammadiyah 1 Kra</li>
+            <li>2021–2022 – PDD Dewan Penggalang SMP N 2 Mojogedang</li>
+            </ol>
+          </section>
+
+          <!-- Section Kontak / footer -->
+          <section id="contact" class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow border border-gray-100 dark:border-gray-700">
+            <h2 class="text-3xl font-bold mb-6">Hubungi Saya</h2>
+            <p class="mb-6 text-gray-300">Temukan saya di platform berikut:</p>
+            
+            <div class="flex space-x-6">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/keisyahalimahmulia" target="_blank" class="flex items-center space-x-2 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg shadow-md transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6 invert">
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/keisyaahm" target="_blank" class="flex items-center space-x-2 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg shadow-md transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-6 h-6 invert">
+                <span>Instagram</span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/keisyaahm" target="_blank" class="flex items-center space-x-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md transition">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="w-6 h-6 invert">
+                <span>GitHub</span>
+              </a>
+            </div>
+          </section>
+
+              <!-- Lightbox modal for images -->
+            <div id="lightbox" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+              <div id="lightboxContent" class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl max-w-4xl w-full">
+              </div>
+              <button id="closeLightbox" class="absolute top-5 right-5 text-white text-2xl">&times;</button>
+            </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
