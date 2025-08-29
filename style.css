@@ -1,0 +1,62 @@
+/* helpers */
+
+/* Floating image style in lightbox */
+.lightbox-floating {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-floating img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.lightbox-floating img:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+
+.float-elem {
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform .35s cubic-bezier(.2, .8, .2, 1);
+}
+.float-elem:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* profile zoom */
+.profile-zoom {
+  transition: transform .28s ease, box-shadow .28s ease;
+  cursor: pointer;
+}
+.profile-zoom.enlarged {
+  transform: scale(2) translateY(-10%);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, .45);
+  z-index: 80;
+}
+
+/* decorative bubbles */
+.bubble {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(30px);
+  opacity: .65;
+  pointer-events: none;
+}
+
+/* small screen tweak */
+@media (max-width:768px) {
+  .profile-zoom.enlarged {
+    transform: scale(1.6) translateY(-5%);
+  }
+}
